@@ -30,13 +30,14 @@ int getLargest({required List numbers}) {
 // we get sec biggest number
 
 int getSecondLargest({required List numbers, required int biggestNumber}) {
-  int secBigestNumber = numbers[0];
+  int? secBigestNumber;
   int length = numbers.length;
-  for (int i = 1; i < length; i++) {
-    if (biggestNumber > numbers[i] && numbers[i] > secBigestNumber) {
-      secBigestNumber = numbers[i];
+  for (int number in numbers) {
+    if (number < biggestNumber) {
+      if (secBigestNumber == null || number > secBigestNumber) {
+        secBigestNumber = number;
+      }
     }
   }
-
-  return secBigestNumber;
+  return secBigestNumber!;
 }
