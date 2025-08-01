@@ -1,11 +1,16 @@
 void main() {
-  List numbers = [5, 10, 11, 20, 5, 3, 30, 5];
-  print(
-    getSecondLargest(
-      numbers: numbers,
-      biggestNumber: getLargest(numbers: numbers),
-    ),
-  );
+  List numbers = [10, 5, 5, 5];
+  Set newNumber = numbers.toSet();
+  if (newNumber.length == 1) {
+    print('Null');
+  } else {
+    print(
+      getSecondLargest(
+        numbers: numbers,
+        biggestNumber: getLargest(numbers: numbers),
+      ),
+    );
+  }
 }
 
 // to get biggest number
