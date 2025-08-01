@@ -20,7 +20,7 @@ int getLargest({required List numbers}) {
   return largestNumber;
 }
 
-// i think check numbers[i] with biggest number and numbers[i-1]
+// check numbers[i] with biggest number and numbers[i-1]
 // biggest > numbers[i] AND number[i] < numbers[i-1]
 // we get sec biggest number
 
